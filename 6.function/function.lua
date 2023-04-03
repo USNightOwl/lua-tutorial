@@ -87,3 +87,16 @@ any remaining return values are discarded.
 -- To force a function call at the end of a value list to be adjusted to one value, surround the whole function
 -- call (including its parentheses) with parentheses:
 print("a", (ReturnArg("b", "c", "d"))) --     a       b
+
+
+
+-- function in local
+do
+  local Tich = function(A, B)
+    return A * B
+  end
+  print(Tich(3, 4)) -- 12
+  print(Tich)       -- function: address
+end
+-- Tich(3, 4) -- error
+print(Tich) -- nil
