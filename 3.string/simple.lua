@@ -24,3 +24,9 @@ print(#"before\0between\0behind") -- 21
   Lua 5.0 didn’t have the length operator #. To get the length of a string, use the function string.len;
 to get the length of a table, use the function table.getn.
 ]]
+-- other way get length string
+function Len(str)
+  return type(str) == "string" and #str
+end
+
+print(Len("hao"))
