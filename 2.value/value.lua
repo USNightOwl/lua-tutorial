@@ -42,3 +42,11 @@ print(Choice1 or Choice2 or Choice3)
 -- use ?:
 Str1, Str2 = "aardvark", "zebra"
 print(Str1 < Str2 and Str1 .. Str2 or Str2 .. Str1)
+
+-- value more than variable
+Val1, Val2 = "Hi", "Hello", "AK47"
+print(Val1, Val2) -- Hi     Hello
+-- variable more than value
+Val1, Val2, Val3 = "Hi", "Hello"
+print(Val1, Val2, Val3) -- Hi     Hello     nil
+-- dont use .. with nil value
