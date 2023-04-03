@@ -18,5 +18,6 @@ print(table.concat(A, ', '))
   1. lua54 -v: version current use lua54,
   results: Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio
   2. lua54 -e "print('Hello')": execute argument as Lua code
+  results: Hello
 
 ]]
