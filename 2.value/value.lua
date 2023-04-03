@@ -50,3 +50,60 @@ print(Val1, Val2) -- Hi     Hello
 Val1, Val2, Val3 = "Hi", "Hello"
 print(Val1, Val2, Val3) -- Hi     Hello     nil
 -- dont use .. with nil value
+
+
+-- local variables
+print("Local variable")
+Arg, NotShadowed = "Outside 1", "Outside 2"
+function ScopeTest(Arg)
+  print(Arg, NotShadowed)
+end
+
+ScopeTest(true)         -- true     Outside 2
+print(Arg, NotShadowed) -- Outside 1      Outside 2
+
+--- function ScopeTest3
+function ScopeTest3(Lc1)
+  for _ = 1, 5 do
+    Lc1 = Lc1 .. "a" -- a -> aaaaa
+    print(Lc1)
+    local Lc1 = ""
+    Lc1 = Lc1 .. "z" -- z (only)
+    print(Lc1)
+  end
+  print("Loop done!!!")
+  print(Lc1) -- aaaaa
+end
+
+ScopeTest3("")
+
+
+-- Test 2
+do
+  local A = "A1"
+  do
+    local B = "B1"
+    do
+      local A = "A2"
+      do
+        local B = "B2"
+        B = "still B2"
+      end
+      do
+        local C = "C1"
+        print(A, B, C)
+      end
+    end
+  end
+end
+-- A2       B1        C1
+
+--- Test 3
+Tc1 = "JQK"
+do
+  Tc1 = "Q"           -- global
+  local Tc1 = Tc1 .. "ABCD"
+  Tc1 = Tc1 .. "abcd" -- or dont use local
+  print(Tc1)          -- QABCDabcd
+end
+print(Tc1)            -- Q
