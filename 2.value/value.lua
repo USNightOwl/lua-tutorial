@@ -38,3 +38,7 @@ print(FavoriteFruit or 'apple') -- FavoriteFruit is not nil => FavoriteFruit
 
 Choice1, Choice3, Choice2 = nil, "pencil", 'pen'
 print(Choice1 or Choice2 or Choice3)
+
+-- use ?:
+Str1, Str2 = "aardvark", "zebra"
+print(Str1 < Str2 and Str1 .. Str2 or Str2 .. Str1)
