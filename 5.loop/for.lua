@@ -52,3 +52,11 @@ for N = 1, 3 do
 end      -- 1 2 3
 print(N) -- Outside loop
 ----> Because N in loop (local variable) ~= N outside loop
+
+
+-- use break and do statements
+for i = 1, 10, 1 do
+  print("Before")
+  do break end -- or break only
+  print("After")
+end
