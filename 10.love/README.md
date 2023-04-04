@@ -13,3 +13,8 @@ You can read [document](https://love2d.org/wiki/Main_Page) of LOVE2D
 ## Graphiccs
 
 ![image](https://user-images.githubusercontent.com/92797788/229837931-b43380f2-fffd-444c-8186-f554b550dbf9.png)
+
+
+## Screenshot
+
+![image](https://user-images.githubusercontent.com/92797788/229850622-66e8b46b-2a4b-4f67-b35d-e5abe3a90b0f.png)
