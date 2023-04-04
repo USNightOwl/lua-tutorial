@@ -35,3 +35,18 @@ print(string.char(65, 43))         -- A+
 print(string.format("%-15s %d", "ABC", 12))
 print(string.format("%s %6d", "ABC", 14))
 print(string.format("%.0f | %10.1f | %.2f | %.3f", 99.44, 99.44, 99.44, 99.44))
+
+
+-------------------------------gsub--------------------------------------
+local gsub = string.gsub
+Str = "The rain in Spain stays mainly in the plain."
+print(gsub(Str, "ai", "oy"))
+-- return string update and all position find this Characters
+-- Res: The royn in Spoyn stays moynly in the ployn.    4
+print(gsub(Str, "ai", "oy", 2))
+-- Res: The royn in Spoyn stays mainly in the plain.    2
+local newStr = gsub(Str, "ai", "")
+print(newStr) -- new string
+
+
+-----------------------------regex------------------------
