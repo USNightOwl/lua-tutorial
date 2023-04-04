@@ -14,6 +14,10 @@ Lua combines simple procedural syntax with powerful data description constructs 
 
 Use terminal: `lua54 <name>.lua` (ex: `lua54 main.lua`)
 
+## How to install and run Love2D
+
+Read [here](https://github.com/nxhawk/lua-tutorial/tree/master/10.love)
+
 ## Link book
 
 You can download [PDF](https://www.pdfdrive.com/beginning-lua-programmingpdf-e34315655.html)
