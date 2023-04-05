@@ -15,9 +15,8 @@ function love.update(dt)
 end
 
 function love.draw()
-  love.graphics.setColor(0, 1, 0)
-  love.graphics.circle("fill", Player.x, Player.y, 20)
   DrawBullets()
+  DrawPlayer()
 end
 
 function PlayerControl(dt)
@@ -57,6 +56,25 @@ function DrawBullets()
   for i = 1, #Bullets do
     love.graphics.setColor(1, 0, 0)
     love.graphics.circle("fill", Bullets[i].x, Bullets[i].y, 5)
-    love.graphics.setColor(1, 1, 1)
   end
+end
+
+function DrawPlayer()
+  local angle = math.atan2((love.mouse.getY() - Player.y), (love.mouse.getX() - Player.x))
+
+  love.graphics.translate(Player.x - 5 + 5, Player.y)
+  love.graphics.rotate(angle - math.pi / 2)
+  love.graphics.translate(-Player.x, -Player.y)
+
+  love.graphics.setColor(1, 1, 0)
+  love.graphics.rectangle("fill", Player.x - 7, Player.y, 14, 40)
+  love.graphics.setColor(0, 1, 0)
+  love.graphics.circle("fill", Player.x, Player.y, 20)
+  love.graphics.setColor(0, 0, 0)
+  love.graphics.circle("fill", Player.x + 10, Player.y + 5, 4)
+  love.graphics.circle("fill", Player.x - 10, Player.y + 5, 4)
+
+  love.graphics.translate(Player.x, Player.y)
+  love.graphics.rotate(-angle + math.pi / 2)
+  love.graphics.translate(-Player.x, -Player.y)
 end

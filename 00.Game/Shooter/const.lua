@@ -3,8 +3,8 @@ WIDTH = love.graphics.getWidth()
 
 function LoadPlayer()
   Player = {}
-  Player.x = 100
-  Player.y = 100
+  Player.x = 500
+  Player.y = 360
   Player.speed = 100
 end
 
