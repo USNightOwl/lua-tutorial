@@ -1,27 +1,13 @@
 HEIGHT = love.graphics.getHeight()
 WIDTH = love.graphics.getWidth()
+MAX_LIFE = 3
+Game = true
+Score = 0
 
-function LoadPlayer()
-  Player = {}
-  Player.x = 500
-  Player.y = 360
-  Player.speed = 100
-end
-
-function LoadBullets()
-  Bullets = {}
-  Bullets.speed = 250
-end
-
-function CreateBullet(x, y, button)
-  local startX = Player.x
-  local startY = Player.y
-  local mouseX = x
-  local mouseY = y
-
-  local angle = math.atan2((mouseY - startY), (mouseX - startX))
-  local bulletDx = Bullets.speed * math.cos(angle)
-  local bulletDy = Bullets.speed * math.sin(angle)
-
-  table.insert(Bullets, { x = startX, y = startY, dx = bulletDx, dy = bulletDy })
+function IsCollision(x1, y1, r1, x2, y2, r2)
+  local distance = math.sqrt((x1 - x2) ^ 2 + (y1 - y2) ^ 2)
+  if distance <= r1 + r2 then
+    return true
+  end
+  return false
 end
