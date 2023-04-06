@@ -27,6 +27,7 @@ function DrawPlayer()
 end
 
 function PlayerControl(dt)
+  dt = dt * ((Score + 50) / 50)
   if love.keyboard.isDown("d") then
     Player.x = Player.x + Player.speed * dt
   elseif love.keyboard.isDown("a") then

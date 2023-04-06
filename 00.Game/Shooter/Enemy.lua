@@ -12,7 +12,7 @@ function CreateEnemy()
     TimeStart = time
     return
   end
-  if time - TimeStart <= 4 - Score / 10 then
+  if time - TimeStart <= 4 - Score / 30 then
     return
   end
   TimeStart = time

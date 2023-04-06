@@ -1,0 +1,15 @@
+o.01. Tạo nhân vật người chơi đơn giản (nhân vật hình tròn)
+o.02. Duy chuyển nhân vật bằng bàn phím và thay đổi hướng nhân vật trỏ tới vị trí con chuột trên màn hình
+o.03. Tạo lớp đạn, xuất hiện khi chuột được nhấn hoặc dùng phím cách, đạn sẽ duy chuyển về phía vị trí con chuột
+o.04. Tạo kẻ địch xuất hiện ngẫu nhiên bên trái hoặc phải màn hình và luôn duy chuyển về phía người chơi
+x.05. Xử lý các hành động va chạm (người dùng, đạn, kẻ địch, screen)
+o.06. Thiết kế điểm số, màn hình thua cuộc, restart game
+x.07. Thay đổi đồ họa cho nhân vật người chời, kẻ thù, đạn, màn hình game
+x.08. Thêm âm thanh cho game
+x.09. Tạo mạng cho người chơi
+x.10. Tạo vật phẩm rớt ra khi đối thủ chết
+x.11.
+x.12.
+x.13.
+x.14.
+x.15.   
