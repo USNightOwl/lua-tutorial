@@ -1,9 +1,13 @@
+local enemy_img = love.graphics.newImage("/Graphics/enemy.png")
+local width, height = enemy_img:getDimensions()
+local soundCollision = love.audio.newSource("/Sounds/player_hit.wav", "static")
+
 TimeStart = love.timer.getTime()
 
 function LoadEnemy()
   Enemies = {}
   Enemies.speed = 40
-  Enemies.radius = 20
+  Enemies.radius = width / 2
 end
 
 function CreateEnemy()
@@ -41,7 +45,8 @@ function DrawEnemy()
     local x, y = Enemies[i].x, Enemies[i].y
     love.graphics.setColor(Enemies[i].cR / 255, Enemies[i].cG / 255, Enemies[i].cB / 255,
       1 / (MAX_LIFE - Enemies[i].life + 1))
-    love.graphics.circle("fill", x, y, Enemies.radius)
+    love.graphics.draw(enemy_img, x, y, 0, 1, 1, width / 2, height / 2)
+    --love.graphics.circle("fill", x, y, Enemies.radius)
   end
 end
 
@@ -69,6 +74,9 @@ function TouchPlayer()
 
   for i = 1, #Enemies do
     if IsCollision(Enemies[i].x, Enemies[i].y, Enemies.radius, Player.x, Player.y, Player.radius) then
+      if Game == true then
+        soundCollision:play()
+      end
       return true
     end
   end
