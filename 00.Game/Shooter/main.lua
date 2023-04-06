@@ -1,9 +1,11 @@
 require("./const")
+require("./Background")
 require('./Player')
 require('./Enemy')
 require('./Bullet')
 
 local function loadGame()
+  LoadBackground()
   LoadPlayer()
   LoadBullets()
   LoadEnemy()
@@ -17,6 +19,7 @@ end
 
 function love.update(dt)
   if Game then
+    UpdateBackground()
     PlayerControl(dt)
     UpdateBullet(dt)
     UpdateEnemies(dt)
@@ -24,12 +27,14 @@ function love.update(dt)
 
   if TouchPlayer() then
     Game = false
+    SoundBG:stop()
   end
 end
 
 function love.draw()
   local x, y, R, G, B, font = 0, 0, 1, 1, 1, 30
   if Game then
+    DrawBackround()
     DrawBullets()
     DrawPlayer()
     DrawEnemy()
