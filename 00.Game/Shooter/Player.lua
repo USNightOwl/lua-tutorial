@@ -1,9 +1,12 @@
+local wing = love.graphics.newImage("/Graphics/wing.png")
+
 local player_img = love.graphics.newImage('Graphics/player.png')
 
 local width, height = player_img:getDimensions()
 
 function LoadPlayer()
   Player = {}
+  Player.life = 3
   Player.x = WIDTH / 2
   Player.y = HEIGHT / 2
   Player.radius = width / 2
@@ -31,6 +34,10 @@ function DrawPlayer()
   love.graphics.translate(Player.x, Player.y)
   love.graphics.rotate(-angle - math.pi / 2)
   love.graphics.translate(-Player.x, -Player.y)
+
+  for i = 1, Player.life do
+    love.graphics.draw(wing, WIDTH - 170 + 40 * (Player.life - i + 1), 10, 0, 0.05, 0.05)
+  end
 end
 
 function PlayerControl(dt)

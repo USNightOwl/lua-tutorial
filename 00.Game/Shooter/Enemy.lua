@@ -80,6 +80,7 @@ function TouchPlayer()
     if IsCollision(Enemies[i].x, Enemies[i].y, Enemies.radius, Player.x, Player.y, Player.radius) then
       if Game == true then
         soundCollision:play()
+        table.remove(Enemies, i)
       end
       return true
     end

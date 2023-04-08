@@ -26,8 +26,11 @@ function love.update(dt)
   end
 
   if TouchPlayer() then
-    Game = false
-    SoundBG:stop()
+    Player.life = Player.life - 1
+    if Player.life <= 0 then
+      Game = false
+      SoundBG:stop()
+    end
   end
 end
 
