@@ -14,6 +14,7 @@ x.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong th�
         -3.x Khiên bảo vệ: giúp tiêu diệt địch trong phạm vi bảo vệ (nhỏ, có thời gian nhất định)
         -4.x Tăng tốc tạm thời (có thời gian nhất định)
         -5.x Vật phẩm dừng thời gian (đối với quái vật)
+        - ...
 x.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
         * Có các loại sau (đều trong thời gian nhất định):
         -1.x Hình dạng nhiều đạn hơn khi bắn (3 viên 1 lúc, 3 hướng khác nhau)
@@ -25,11 +26,30 @@ x.12. Thêm nhiều loại quái vật hơn
         -1.x Quái vật tốc độ nhanh (nhưng chỉ 1 mạng duy nhất)
         -2.x Quái vật khổng lồ, nhiều mạng (8 mạng), nhưng tốc độ chậm vcl
         - ...
-x.13. Thêm animation 
-x.14. Dynamic screen
-x.15.   
-x.16.
-x.17.
+x.13. Hiệu ứng game
+      -1.x Khi nhặt vật phẩm (hiệu ứng của vật phẩm khi nhặt, sử dụng)
+      -2.x Khi bắn đạn trúng quái vật
+      -3.x Khi quái vật chết
+      -4.x Khi người chơi mất một mạng, chết
+      -5.x Thêm nhiều âm thanh cho các hiệu ứng
+      -6.x Khi mới bắt đầu game 
+      - ...
+x.14. Thêm animation
+x.15. Dynamic screen  
+x.16. Thêm menu game
+      -1.x bật/tắt âm thanh nền/game
+      -2.x Mở game
+      -3.x High Score
+      -4.x Giới thiệu game, hướng dẫn cách chơi, nhà phát triển
+          -1.x Giới thiệu các loại quái vật (có ảnh MH)
+          -2.x Giới thiệu các loại người chơi (có ảnh MH)
+          -3.x Giới thiệu các loại vật phẩm (có ảnh MH)
+          - ...
+      - ...
+x.17. Thêm cơ sở dữ liệu cho game
+      -1.x Đăng nhập bằng tài khoản/đăng ký
+      -2.x Lưu game, mở game đã lưu
+      -3.x Điểm số cao nhất
 x.18.
 x.19.
 x.20.
