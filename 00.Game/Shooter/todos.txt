@@ -7,9 +7,29 @@ o.06. Thiết kế điểm số, màn hình thua cuộc, restart game
 o.07. Thay đổi đồ họa cho nhân vật người chời, kẻ thù, đạn, màn hình game
 o.08. Thêm âm thanh cho game, xử lý âm thanh khi có các sự kiện cần thiết
 o.09. Tạo mạng cho người chơi, thanh máu cho đối thủ (quái vật)
-x.10. Tạo vật phẩm rớt ra khi đối thủ chết, player nhặt vật phẩm
-x.11.
-x.12.
-x.13.
-x.14.
+x.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong thời gian nhất định), player nhặt vật phẩm
+        * Vật phẩm có thể là:
+        - Thêm mạng cho người chơi (luôn có tối đa 3 mạng)
+        - Vật phẩm tăng điểm số/vàng
+        - Khiên bảo vệ: giúp tiêu diệt địch trong phạm vi bảo vệ (nhỏ, có thời gian nhất định)
+        - Tăng tốc tạm thời (có thời gian nhất định)
+        - Vật phẩm dừng thời gian (đối với quái vật)
+x.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
+        * Có các loại sau (đều trong thời gian nhất định):
+        - Hình dạng nhiều đạn hơn khi bắn (3 viên 1 lúc, 3 hướng khác nhau)
+        - Hình dạng đạn laser (1, 2, 3 nhánh thẳng)
+        - Hình dạng đạn 1 viên chết kẻ địch
+        - ...
+x.12. Thêm nhiều loại quái vật hơn
+        * Có các loại sau:
+        - Quái vật tốc độ nhanh (nhưng chỉ 1 mạng duy nhất)
+        - Quái vật khổng lồ, nhiều mạng (8 mạng), nhưng tốc độ chậm vcl
+        - ...
+x.13. Thêm animation 
+x.14. Dynamic screen
 x.15.   
+x.16.
+x.17.
+x.18.
+x.19.
+x.20.
