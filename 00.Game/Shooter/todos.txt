@@ -6,7 +6,7 @@ o.05. Xử lý các hành động va chạm (người dùng, đạn, kẻ địc
 o.06. Thiết kế điểm số, màn hình thua cuộc, restart game
 o.07. Thay đổi đồ họa cho nhân vật người chời, kẻ thù, đạn, màn hình game
 o.08. Thêm âm thanh cho game, xử lý âm thanh khi có các sự kiện cần thiết
-x.09. Tạo mạng cho người chơi, thanh máu cho đối thủ (quái vật)
+o.09. Tạo mạng cho người chơi, thanh máu cho đối thủ (quái vật)
 x.10. Tạo vật phẩm rớt ra khi đối thủ chết, player nhặt vật phẩm
 x.11.
 x.12.
