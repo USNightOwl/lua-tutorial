@@ -1,5 +1,5 @@
 require("./const")
-require("./Background")
+require("/Background")
 require('./Player')
 require('./Enemy')
 require('./Bullet')

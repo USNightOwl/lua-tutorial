@@ -46,6 +46,10 @@ function DrawEnemy()
     love.graphics.setColor(Enemies[i].cR / 255, Enemies[i].cG / 255, Enemies[i].cB / 255,
       1 / (MAX_LIFE - Enemies[i].life + 1))
     love.graphics.draw(enemy_img, x, y, 0, 1, 1, width / 2, height / 2)
+    love.graphics.setColor(1, 0, 0)
+    love.graphics.rectangle("fill", x - 12, y - Enemies.radius - 6, 24 - 24 / 3 * (3 - Enemies[i].life), 5)
+    love.graphics.setColor(0, 0, 0)
+    love.graphics.rectangle("line", x - 12, y - Enemies.radius - 6, 24, 5)
     --love.graphics.circle("fill", x, y, Enemies.radius)
   end
 end
