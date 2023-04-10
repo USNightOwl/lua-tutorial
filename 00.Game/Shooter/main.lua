@@ -1,14 +1,13 @@
-require("./const")
-require("/Background")
-require('./Player')
-require('./Enemy')
-require('./Bullet')
+require("libs")
 
 local function loadGame()
   LoadBackground()
   LoadPlayer()
   LoadBullets()
   LoadEnemy()
+  LoadShield()
+  LoadTimer()
+  LoadItems()
   Score = 0
   Game = true
 end
@@ -18,11 +17,14 @@ function love.load()
 end
 
 function love.update(dt)
-  if Game then
+  if Game and dt < 1 then
     UpdateBackground()
     PlayerControl(dt)
     UpdateBullet(dt)
+    UpdateItems(dt)
     UpdateEnemies(dt)
+    UpdateShield()
+    UpdateTimer()
   end
 
   if TouchPlayer() then
@@ -39,8 +41,11 @@ function love.draw()
   if Game then
     DrawBackround()
     DrawBullets()
+    DrawShield()
     DrawPlayer()
+    DrawItems()
     DrawEnemy()
+    DrawTimer()
   else
     local gameFont = love.graphics.newFont(80)
     love.graphics.setBackgroundColor(0, 0, 0)
