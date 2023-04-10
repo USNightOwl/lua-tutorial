@@ -1,0 +1,8 @@
+require("./const")
+require("src.Background")
+require('src.Player')
+require('src.Enemy')
+require('src.Bullet')
+require('src.Items')
+require('src.state.Shield')
+require('src.state.Timer')
