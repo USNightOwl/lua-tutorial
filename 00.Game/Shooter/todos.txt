@@ -9,11 +9,12 @@ o.08. Thêm âm thanh cho game, xử lý âm thanh khi có các sự kiện cầ
 o.09. Tạo mạng cho người chơi, thanh máu cho đối thủ (quái vật)
 x.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong thời gian nhất định), player nhặt vật phẩm
         * Vật phẩm có thể là:
-        -1.x Thêm mạng cho người chơi (luôn có tối đa 3 mạng)
-        -2.x Vật phẩm tăng điểm số/vàng
-        -3.x Khiên bảo vệ: giúp tiêu diệt địch trong phạm vi bảo vệ (nhỏ, có thời gian nhất định)
-        -4.x Tăng tốc tạm thời (có thời gian nhất định)
+        -1.o Thêm mạng cho người chơi (luôn có tối đa 3 mạng)
+        -2.o Vật phẩm tăng điểm số/vàng
+        -3.o Khiên bảo vệ: giúp tiêu diệt địch trong phạm vi bảo vệ (nhỏ, có thời gian nhất định)
+        -4.o Tăng tốc tạm thời (có thời gian nhất định)
         -5.x Vật phẩm dừng thời gian (đối với quái vật)
+        -6.x Vật phẩm tiêu diệt tất cả quái vật trên màn hình (có hiệu ứng loan rộng)
         - ...
 x.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
         * Có các loại sau (đều trong thời gian nhất định):
