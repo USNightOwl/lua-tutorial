@@ -15,6 +15,7 @@ x.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong th�
         -4.o Tăng tốc tạm thời (có thời gian nhất định)
         -5.x Vật phẩm dừng thời gian (đối với quái vật)
         -6.x Vật phẩm tiêu diệt tất cả quái vật trên màn hình (có hiệu ứng loan rộng)
+        -7.x Vật phẩm ngẫu nhiên (có thể là hình dạng player hoặc vật phẩm thông thường)
         - ...
 x.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
         * Có các loại sau (đều trong thời gian nhất định):
