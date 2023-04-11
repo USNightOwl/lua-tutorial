@@ -3,3 +3,4 @@ o.02. Tạo background, thay đổi dựa vào vị trí nhân vật (camera)
 o.03. Tạo nhân vật quái vật(vị trí theo world game), dựa vào vị trí camera mà vẽ ra screen camera
 o.04. Random vị trí quái vật và handle hành động duy chuyển của nó (qua trái hoặc qua phải)
 o.05. Xử lý va chạm giũa người chơi và quái vật (đơn giản)
+x.06. Tạo thêm màn chơi (level)
