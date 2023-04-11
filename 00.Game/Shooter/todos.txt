@@ -7,7 +7,7 @@ o.06. Thiết kế điểm số, màn hình thua cuộc, restart game
 o.07. Thay đổi đồ họa cho nhân vật người chời, kẻ thù, đạn, màn hình game
 o.08. Thêm âm thanh cho game, xử lý âm thanh khi có các sự kiện cần thiết
 o.09. Tạo mạng cho người chơi, thanh máu cho đối thủ (quái vật)
-x.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong thời gian nhất định), player nhặt vật phẩm
+u.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong thời gian nhất định), player nhặt vật phẩm
         * Vật phẩm có thể là:
         -1.o Thêm mạng cho người chơi (luôn có tối đa 3 mạng)
         -2.o Vật phẩm tăng điểm số/vàng
@@ -17,18 +17,18 @@ x.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong th�
         -6.x Vật phẩm tiêu diệt tất cả quái vật trên màn hình (có hiệu ứng loan rộng)
         -7.x Vật phẩm ngẫu nhiên (có thể là hình dạng player hoặc vật phẩm thông thường)
         - ...
-x.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
+u.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
         * Có các loại sau (đều trong thời gian nhất định):
         -1.x Hình dạng nhiều đạn hơn khi bắn (3 viên 1 lúc, 3 hướng khác nhau)
         -2.x Hình dạng đạn laser (1, 2, 3 nhánh thẳng)
         -3.x Hình dạng đạn 1 viên chết kẻ địch
         - ...
-x.12. Thêm nhiều loại quái vật hơn
+u.12. Thêm nhiều loại quái vật hơn
         * Có các loại sau:
         -1.x Quái vật tốc độ nhanh (nhưng chỉ 1 mạng duy nhất)
         -2.x Quái vật khổng lồ, nhiều mạng (8 mạng), nhưng tốc độ chậm vcl
         - ...
-x.13. Hiệu ứng game
+u.13. Hiệu ứng game
       -1.x Khi nhặt vật phẩm (hiệu ứng của vật phẩm khi nhặt, sử dụng)
       -2.x Khi bắn đạn trúng quái vật
       -3.x Khi quái vật chết
@@ -38,17 +38,17 @@ x.13. Hiệu ứng game
       - ...
 x.14. Thêm animation
 x.15. Dynamic screen  
-x.16. Thêm menu game
+u.16. Thêm menu game
       -1.x bật/tắt âm thanh nền/game
       -2.x Mở game
       -3.x High Score
-      -4.x Giới thiệu game, hướng dẫn cách chơi, nhà phát triển
+      -4.u Giới thiệu game, hướng dẫn cách chơi, nhà phát triển
           -1.x Giới thiệu các loại quái vật (có ảnh MH)
           -2.x Giới thiệu các loại người chơi (có ảnh MH)
           -3.x Giới thiệu các loại vật phẩm (có ảnh MH)
           - ...
       - ...
-x.17. Thêm cơ sở dữ liệu cho game
+u.17. Thêm cơ sở dữ liệu cho game
       -1.x Đăng nhập bằng tài khoản/đăng ký
       -2.x Lưu game, mở game đã lưu
       -3.x Điểm số cao nhất
