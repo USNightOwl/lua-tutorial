@@ -55,6 +55,14 @@ function DrawEnemy()
 end
 
 function UpdateEnemies(dt)
+  if love.timer.getTime() - Runtime >= 10 then
+    Stop = false
+  end
+
+  if Stop then
+    return
+  end
+
   CreateEnemy()
 
   if #Enemies <= 0 then
@@ -87,4 +95,11 @@ function TouchPlayer()
   end
 
   return false
+end
+
+function ClearAllEnemies()
+  for i = #Enemies, 1, -1 do
+    table.remove(Enemies, i)
+    Score = Score + 1
+  end
 end
