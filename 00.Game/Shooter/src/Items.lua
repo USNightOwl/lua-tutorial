@@ -28,7 +28,17 @@ local typeItems = {
     img = love.graphics.newImage('/Graphics/items/bomb.png'),
     scale = { 0.8, 1 },
     timeLife = 8,
-  }
+  },
+  {
+    img = love.graphics.newImage('/Graphics/player/player2.png'),
+    scale = { 0.3, 0.5 },
+    timeLife = 8,
+  },
+  {
+    img = love.graphics.newImage('/Graphics/bullet/bullet3.png'),
+    scale = { 0.6, 1 },
+    timeLife = 8,
+  },
 }
 
 function LoadItems()
@@ -88,6 +98,12 @@ local function chkCollisionPlayer()
         Runtime = love.timer.getTime()
       elseif item.type == 6 then
         ClearAllEnemies()
+      elseif item.type == 7 then
+        State = 2
+        StateTime = love.timer.getTime()
+      elseif item.type == 8 then
+        State = 3
+        StateTime = love.timer.getTime()
       end
       table.remove(Items, i)
     end
