@@ -68,13 +68,17 @@ end
 function RandcreateItem(x, y)
   if love.math.random(6, 399) % 2 == 0 then
     if love.math.random(5, 401) % 3 == 0 and Player.life < 3 then
-      CreateItem(x, y, 1)
+      CreateItem(x, y, 1) -- mang
     elseif love.math.random(4, 442) % 4 == 0 then
-      CreateItem(x, y, 4)
+      CreateItem(x, y, 4) -- speed
     elseif love.math.random(5, 401) % 4 == 0 then
-      CreateItem(x, y, 3)
+      CreateItem(x, y, 3) -- shield
+    elseif love.math.random(5, 401) % 5 == 0 and Stop == false then
+      CreateItem(x, y, 5) -- stop time
+    elseif love.math.random(5, 401) % 8 == 0 then
+      CreateItem(x, y, 6) -- clear all Enemies
     else
-      CreateItem(x, y, 2)
+      CreateItem(x, y, 2) -- coin
     end
   end
 end
