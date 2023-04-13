@@ -19,9 +19,9 @@ u.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong th�
         - ...
 u.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
         * Có các loại sau (đều trong thời gian nhất định):
-        -1.x Hình dạng nhiều đạn hơn khi bắn (3 viên 1 lúc, 3 hướng khác nhau)
+        -1.o Hình dạng nhiều đạn hơn khi bắn (3 viên 1 lúc, 3 hướng khác nhau)
         -2.x Hình dạng đạn laser (1, 2, 3 nhánh thẳng)
-        -3.x Hình dạng đạn 1 viên chết kẻ địch
+        -3.o Hình dạng đạn 1 viên chết kẻ địch
         - ...
 u.12. Thêm nhiều loại quái vật hơn
         * Có các loại sau:
