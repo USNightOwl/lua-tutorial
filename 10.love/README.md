@@ -8,7 +8,7 @@
 
 You can see here [Youtube](https://www.youtube.com/watch?v=wttKHL90Ank)
 
-You can read [document](https://love2d.org/wiki/Main_Page) of LOVE2D
+You can read [document](https://love2d.org/wiki/Main_Page) of LOVE2D or [book](https://github.com/nxhawk/lua-tutorial/blob/master/LOVE%20for%20Lua%20Game%20Programming%20(%20PDFDrive%20).pdf)
 
 ## Graphiccs
 
