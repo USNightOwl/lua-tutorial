@@ -13,8 +13,8 @@ u.10. Tạo vật phẩm rớt ra khi đối thủ chết (tồn tại trong th�
         -2.o Vật phẩm tăng điểm số/vàng
         -3.o Khiên bảo vệ: giúp tiêu diệt địch trong phạm vi bảo vệ (nhỏ, có thời gian nhất định)
         -4.o Tăng tốc tạm thời (có thời gian nhất định)
-        -5.x Vật phẩm dừng thời gian (đối với quái vật)
-        -6.x Vật phẩm tiêu diệt tất cả quái vật trên màn hình (có hiệu ứng loan rộng)
+        -5.o Vật phẩm dừng thời gian (đối với quái vật)
+        -6.o Vật phẩm tiêu diệt tất cả quái vật trên màn hình (có hiệu ứng loan rộng)
         -7.x Vật phẩm ngẫu nhiên (có thể là hình dạng player hoặc vật phẩm thông thường)
         - ...
 u.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (mạng, kích thước, tốc độ)
