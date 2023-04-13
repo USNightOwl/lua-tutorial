@@ -1,5 +1,16 @@
-local bullet_img = love.graphics.newImage("/Graphics/bullet.png")
-local width, height = bullet_img:getDimensions()
+local allState =
+{
+  {
+    bullet_img = love.graphics.newImage("/Graphics/bullet/bullet1.png")
+  },
+  {
+    bullet_img = love.graphics.newImage("/Graphics/bullet/bullet2.png")
+  },
+  {
+    bullet_img = love.graphics.newImage("/Graphics/bullet/bullet3.png")
+  }
+}
+
 local soundCollision = love.audio.newSource("/Sounds/enemy_hit.wav", "static")
 local soundFire = love.audio.newSource("/Sounds/player_fire.wav", "static")
 soundFire:setVolume(0.5)
@@ -7,8 +18,8 @@ soundFire:setVolume(0.5)
 function LoadBullets()
   Bullets = {}
   Bullets.speed = 250
-  Bullets.radius = width / 2
   Bullets.max = 5
+  Bullets.img = allState[State].bullet_img
 end
 
 function CreateBullet(x, y, button)
@@ -26,10 +37,44 @@ function CreateBullet(x, y, button)
   local bulletDy = Bullets.speed * math.sin(angle)
 
   soundFire:play()
-  table.insert(Bullets, { x = startX, y = startY, dx = bulletDx, dy = bulletDy, angle = angle })
+  if State == 1 or State == 3 then
+    Bullets.max = 5
+    if State == 3 then
+      Bullets.max = 3
+    end
+    table.insert(Bullets,
+      { img = allState[State].bullet_img, x = startX, y = startY, dx = bulletDx, dy = bulletDy, angle = angle })
+  elseif State == 2 then
+    Bullets.max = 15
+    if #Bullets <= 12 then
+      table.insert(Bullets,
+        {
+          img = allState[State].bullet_img,
+          x = startX,
+          y = startY,
+          dx = Bullets.speed * math.cos(angle - math.pi / 15),
+          dy = Bullets.speed * math.sin(angle - math.pi / 15),
+          angle = angle - math.pi / 15
+        })
+      table.insert(Bullets,
+        {
+          img = allState[State].bullet_img,
+          x = startX,
+          y = startY,
+          dx = Bullets.speed * math.cos(angle + math.pi / 15),
+          dy = Bullets.speed * math.sin(angle + math.pi / 15),
+          angle = angle + math.pi / 15
+        })
+      table.insert(Bullets,
+        { img = allState[State].bullet_img, x = startX, y = startY, dx = bulletDx, dy = bulletDy, angle = angle })
+    end
+  end
 end
 
 function DrawBullets()
+  local width, height = allState[State].bullet_img:getDimensions()
+  Bullets.radius = width / 2
+
   for i = 1, #Bullets do
     --love.graphics.setColor(1, 0, 0)
     --love.graphics.circle("fill", Bullets[i].x, Bullets[i].y, Bullets.radius)
@@ -40,7 +85,7 @@ function DrawBullets()
     love.graphics.rotate(angle + math.pi / 2)
     love.graphics.translate(-x, -y)
 
-    love.graphics.draw(bullet_img, Bullets[i].x, Bullets[i].y, 0, 1, 1, width / 2, height / 2)
+    love.graphics.draw(Bullets[i].img, Bullets[i].x, Bullets[i].y, 0, 1, 1, width / 2, height / 2)
 
     love.graphics.translate(x, y)
     love.graphics.rotate(-angle - math.pi / 2)
@@ -77,6 +122,10 @@ function RandcreateItem(x, y)
       CreateItem(x, y, 5) -- stop time
     elseif love.math.random(5, 401) % 8 == 0 then
       CreateItem(x, y, 6) -- clear all Enemies
+    elseif love.math.random(5, 401) % 4 == 0 and State ~= 2 then
+      CreateItem(x, y, 7)
+    elseif love.math.random(5, 401) % 4 == 0 and State ~= 3 then
+      CreateItem(x, y, 8)
     else
       CreateItem(x, y, 2) -- coin
     end
@@ -94,7 +143,7 @@ function ChkCollision()
         table.remove(Bullets, i)
         Enemies[j].life = Enemies[j].life - 1
         soundCollision:play()
-        if Enemies[j].life <= 0 then
+        if Enemies[j].life <= 0 or State == 3 then
           RandcreateItem(Enemies[j].x, Enemies[j].y)
           table.remove(Enemies, j)
           Score = Score + 1
