@@ -1,15 +1,24 @@
 local wing = love.graphics.newImage("/Graphics/wing.png")
 
-local player_img = love.graphics.newImage('Graphics/player.png')
+local stateImage =
+{
+  {
+    player_img = love.graphics.newImage('/Graphics/player/player1.png')
+  },
+  {
+    player_img = love.graphics.newImage('/Graphics/player/player2.png')
+  },
+  {
+    player_img = love.graphics.newImage('/Graphics/player/player3.png')
+  }
+}
 
-local width, height = player_img:getDimensions()
 
 function LoadPlayer()
   Player = {}
   Player.life = 3
   Player.x = WIDTH / 2
   Player.y = HEIGHT / 2
-  Player.radius = width / 2
   Player.speed = 100
 
   Player.bonus = 0
@@ -17,9 +26,14 @@ function LoadPlayer()
 end
 
 function DrawPlayer()
+  if State ~= 1 and love.timer.getTime() - StateTime >= 20 then
+    State = 1
+  end
   if love.timer.getTime() - Player.bonusTime >= 8 then
     Player.bonus = 0
   end
+  local width, height = stateImage[State].player_img:getDimensions()
+  Player.radius = width / 2
   local angle = math.atan2((love.mouse.getY() - Player.y), (love.mouse.getX() - Player.x))
 
   love.graphics.translate(Player.x, Player.y)
@@ -35,7 +49,7 @@ function DrawPlayer()
     love.graphics.circle("fill", Player.x + 10, Player.y + 5, 4)
     love.graphics.circle("fill", Player.x - 10, Player.y + 5, 4)
   ]]
-  love.graphics.draw(player_img, Player.x, Player.y, 0, 1, 1, width / 2, height / 2)
+  love.graphics.draw(stateImage[State].player_img, Player.x, Player.y, 0, 1, 1, width / 2, height / 2)
 
   love.graphics.translate(Player.x, Player.y)
   love.graphics.rotate(-angle - math.pi / 2)
