@@ -21,7 +21,7 @@ local function chkCollisionShield()
   end
 
   for i = #Enemies, 1, -1 do
-    if IsCollision(Shield.x, Shield.y, Shield.radius, Enemies[i].x, Enemies[i].y, Enemies.radius) then
+    if IsCollision(Shield.x, Shield.y, Shield.radius, Enemies[i].x, Enemies[i].y, Enemies[i].img[Enemies[i].shape]:getWidth() / 2) then
       Score = Score + 1
       RandcreateItem(Enemies[i].x, Enemies[i].y)
       table.remove(Enemies, i)

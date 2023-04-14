@@ -20,7 +20,8 @@ function LoadPlayer()
   Player.x = WIDTH / 2
   Player.y = HEIGHT / 2
   Player.speed = 100
-
+  local width = stateImage[State].player_img:getWidth()
+  Player.radius = width / 2
   Player.bonus = 0
   Player.bonusTime = 0
 end
