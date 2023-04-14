@@ -116,16 +116,16 @@ function RandcreateItem(x, y)
       CreateItem(x, y, 1) -- mang
     elseif love.math.random(4, 442) % 4 == 0 then
       CreateItem(x, y, 4) -- speed
-    elseif love.math.random(5, 401) % 4 == 0 then
-      CreateItem(x, y, 3) -- shield
     elseif love.math.random(5, 401) % 5 == 0 and Stop == false then
       CreateItem(x, y, 5) -- stop time
     elseif love.math.random(5, 401) % 8 == 0 then
       CreateItem(x, y, 6) -- clear all Enemies
     elseif love.math.random(5, 401) % 4 == 0 and State ~= 2 then
-      CreateItem(x, y, 7)
+      CreateItem(x, y, 7) -- mutil shot
+    elseif love.math.random(5, 401) % 12 == 0 then
+      CreateItem(x, y, 3) -- shield
     elseif love.math.random(5, 401) % 4 == 0 and State ~= 3 then
-      CreateItem(x, y, 8)
+      CreateItem(x, y, 8) -- one shot one kill
     else
       CreateItem(x, y, 2) -- coin
     end
@@ -139,8 +139,9 @@ function ChkCollision()
 
   for i = #Bullets, 1, -1 do
     for j = #Enemies, 1, -1 do
-      if IsCollision(Bullets[i].x, Bullets[i].y, Bullets.radius, Enemies[j].x, Enemies[j].y, Enemies.radius) then
+      if IsCollision(Bullets[i].x, Bullets[i].y, Bullets.radius, Enemies[j].x, Enemies[j].y, Enemies[j].img[Enemies[j].shape]:getWidth() / 2) then
         table.remove(Bullets, i)
+        Enemies[j].shape = love.math.random(#Enemies[j].img / 2 + 1, #Enemies[j].img)
         Enemies[j].life = Enemies[j].life - 1
         soundCollision:play()
         if Enemies[j].life <= 0 or State == 3 then

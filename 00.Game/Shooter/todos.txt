@@ -25,8 +25,8 @@ u.11. Thêm nhiều loại player (sức mạnh), nhiều loại quái vật (m�
         - ...
 u.12. Thêm nhiều loại quái vật hơn
         * Có các loại sau:
-        -1.x Quái vật tốc độ nhanh (nhưng chỉ 1 mạng duy nhất)
-        -2.x Quái vật khổng lồ, nhiều mạng (8 mạng), nhưng tốc độ chậm vcl
+        -1.o Quái vật tốc độ nhanh (nhưng chỉ 1 mạng duy nhất)
+        -2.o Quái vật khổng lồ, nhiều mạng (8 -> 10 mạng), nhưng tốc độ chậm vcl
         - ...
 u.13. Hiệu ứng game
       -1.x Khi nhặt vật phẩm (hiệu ứng của vật phẩm khi nhặt, sử dụng)
